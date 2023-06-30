@@ -1,8 +1,8 @@
 window.customCards = window.customCards || [];
 window.customCards.push({
-	type: "fan-percent-button-row",
-	name: "fan percent button row",
-	description: "A plugin to display your fan controls in a button row.",
+	type: "four-speed-fan-button-row",
+	name: "four speed fan button row",
+	description: "A plugin to display your Four speed fan controls in a button row.",
 	preview: false,
 });
 
@@ -10,7 +10,7 @@ const LitElement = customElements.get("ha-panel-lovelace") ? Object.getPrototype
 const html = LitElement.prototype.html;
 const css = LitElement.prototype.css;
 
-class CustomFanPercentRow extends LitElement {
+class CustomFourSpeedPercentRow extends LitElement {
 
 	constructor() {
 		super();
@@ -455,4 +455,4 @@ class CustomFanPercentRow extends LitElement {
 	}
 }
 
-customElements.define('fan-percent-button-row', CustomFanPercentRow);
+customElements.define('four-speed-fan-button-row', CustomFourSpeedPercentRow);
