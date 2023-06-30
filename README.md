@@ -1,7 +1,10 @@
-# Fan Percent Button Row
-Provides a means to program 2 or 3 preset speed percentage settings for fans selectable from a Lovelace button row.
+# Four Speed Fan Button Row
 
-## NOTE: You must be on Home Assistant V2021.3.X or higher to use this plug-in. However, if your fan integration hasn't been updated to the new control method (if it doesn't actually use percentages for speeds but still uses a speed list) then you need to use the fan-control-entity-row.
+Provides a means to program 4 ( or 2 or 3 ) preset speed percentage settings for fans selectable from a Lovelace button row.
+
+## NOTE: Forked and modified from [Fan Button Percent Row](https://github.com/finity69x2/fan-percent-button-row)
+
+## NOTE: You must be on Home Assistant V2021.3.X or higher to use this plug-in. However, if your fan integration hasn't been updated to the new control method (if it doesn't actually use percentages for speeds but still uses a speed list) then you need to use the fan-control-entity-row
 
 Installation:
 
@@ -21,7 +24,6 @@ The easiest way to install this is to use the Home Assistant Community Store (HA
 
 Follow the instructions there for installation making sure you note the "url:" section for the resources addition.
 
-
 Conversely, if you don't use HACS you can install it manually by performing the following:
 
 Copy the fan-percent-button-row.js file to the appropriate folder in your Home Assistant Configuration directory (/config/www/).
@@ -32,9 +34,8 @@ Place the following in your "resources" section in your lovelace configuration (
     - url: /local/fan-percent-button-row.js
       type: module
   ```
-    
-Then to use this in a card place the following in your entity card:
 
+Then to use this in a card place the following in your entity card:
 
 <b>Options:</b>
 
@@ -65,13 +66,12 @@ Then to use this in a card place the following in your entity card:
 | customMedText | String | No | 'MED' | Sets the text of the "medium" speed button |
 | customHiText | String | No | 'HIGH' | Sets the text of the "High" speed button |
 
-
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
 
 If the speed percantage is changed via any other means (slider, service call, etc) the buttons will indicate which range the speed percentage is in based on the setpoint settings in the config.
 
 <b>Configuration Examples:</b>
-    
+
   ```
     cards:
       - type: entities
@@ -127,4 +127,3 @@ This is with the "Slate" frontend theme set:
 This is how this plugin looks with the plugin fully themed:
 
 ![Slate-Themed](images/fan_percent_themed.jpg)
-
